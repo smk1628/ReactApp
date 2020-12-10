@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    overflow: auto;
+}
+header{
+    height: 200px;
+    background-color: aqua;
+}
+header h1{
+    margin: 0;
+    padding-left: 50px;
+    line-height: 200px;
+    font-size: 46px;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+#left .user,.txt{
+    margin: 10px 0px 20px 20px;
+}
+#left button{
+    margin-left: 20px;
+}
+#right ul{
+    margin-right: 20px;
+}
+#right li{
+    position: relative;
+    padding: 5px 15px 15px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+#right li p{
+    text-indent: 2em;
+}
+#right button{
+    position: absolute;
+    top: 0;
+    right: 7px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0);
+    padding: 1px 3px;
+    color: blueviolet;
+    outline-style: none;
+}
+#right button:hover{
+    border: 1px solid #888;
+    color: red;
+}

@@ -1,0 +1,31 @@
+li{
+    position: relative;
+    padding: 15px 15px 25px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+li p{
+    text-indent: 2em;
+}
+li button{
+    position: absolute;
+    top: 0;
+    right: 7px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0);
+    padding: 1px 3px;
+    color: blueviolet;
+    outline-style: none;
+}
+li button:hover{
+    border: 1px solid #888;
+    color: red;
+}
+li span{
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    color: #ccc;
+}

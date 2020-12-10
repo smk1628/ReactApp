@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>请发表对React的评论</h1>
+        </header>
+        <div id="container">
+            <div class="row">
+                <div id="left" class="col-md-4">
+                    <div class="input-group user">
+                        <label >用户名：</label>
+                        <input class="form-control" type="text" placeholder="用户名：">
+                    </div>
+                    <div class="input-group txt">
+                        <label >请留言：</label>
+                        <textarea class="form-control" cols="30" rows="10" placeholder="请留言"></textarea>
+                    </div>
+                    <button class="btn">提交</button>
+                </div>
+                <div id="right" class="col-md-8">
+                    <h3>评论回复:</h3>
+                    <ul>
+                        <li>
+                            <h4>Tom说：</h4>
+                            <p>ReactJs好难</p>
+                            <button>删除</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
