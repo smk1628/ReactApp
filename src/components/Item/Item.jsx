@@ -3,7 +3,7 @@ import './Item.css'
 
 class Item extends React.Component{
     render(){
-        let{login,avatar_url,html_url,id} = this.props
+        let{login,avatar_url,html_url} = this.props
         return (
             <li className="item">
                 <a href={html_url}>
