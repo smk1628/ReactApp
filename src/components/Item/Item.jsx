@@ -7,7 +7,7 @@ class Item extends React.Component{
         return (
             <li className="item">
                 <a href={html_url}>
-                    <img src={avatar_url} alt='pic'/>
+                    <img src={avatar_url} alt="pic"/>
                     <span className="name">{login}</span>
                 </a>
             </li>
