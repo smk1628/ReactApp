@@ -1,17 +1,18 @@
 import React from 'react'
 import './Search.css'
 import axios from 'axios'
-import PubSub from 'pubsub-js'
 class Search extends React.Component{
     myRef = React.createRef()
     getSearchData = ()=>{
+        //获取父组件的setAppState()
+        let {setAppState }= this.props
         let obj = {
             user:[],
             isLoading:true,
             isFirst:false,
             error:''
         }
-        PubSub.publish('update',obj)    //发布
+        setAppState(obj)
         //获取用户输入
         let inputValue = this.myRef.current.value
         //alert(inputValue)
@@ -23,7 +24,7 @@ class Search extends React.Component{
                 obj.user = res.data.items.map((item)=>{return {login:item.login,id:item.id,avatar_url:item.avatar_url,html_url:item.html_url}})
                 //console.log(obj)
                 obj.isLoading = false
-                PubSub.publish('update',obj)    //发布
+                setAppState(obj)
 
             }
         )
@@ -32,7 +33,7 @@ class Search extends React.Component{
                 obj.isLoading = false
                 obj.error = err.message
                 //console.log(obj)
-                PubSub.publish('update',obj)    //发布
+                setAppState(obj)
             }
         )
 

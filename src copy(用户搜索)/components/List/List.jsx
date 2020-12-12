@@ -1,23 +1,9 @@
 import React from 'react'
 import './List.css'
 import Item from '../Item/Item.jsx'
-import PubSub from 'pubsub-js'
 class List extends React.Component{
-    state = {
-        user:[],
-        isLoading:false,
-        isFirst:true,
-        error:''
-    }
-    mySubscriber = (msg,data)=>{
-        this.setState(data)
-        //console.log(this.state)
-    }
-    componentDidMount(){    //订阅
-        PubSub.subscribe('update',this.mySubscriber)
-    }
     render(){
-        let newState = this.state
+        let {newState} = this.props
         if(newState.isFirst){
             return <h2>请输入关键字以搜索....</h2>
         }else if(newState.isLoading){
