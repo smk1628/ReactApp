@@ -19,6 +19,7 @@ class App extends React.Component{
                         <Switch>
                             <Route path="/home" component={Home}/> {/**exact 精准匹配 */}
                             <Route path="/about" component={About}/>
+                            
                             <Redirect to="/home"/>
                         </Switch>
                     </div>
